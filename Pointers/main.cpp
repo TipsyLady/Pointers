@@ -3,6 +3,7 @@ using namespace std;
 //#define POINTERS_BASICS
 //#define POINTERS_AND_ARRAYS
 #define tab "\t"
+#define split "------------------------------"
 using std::cout;
 using std::cin;
 using std::endl;
@@ -47,7 +48,35 @@ void main()
 	
 	FillRand(arr, n);
 	Print(arr, n);
-	delete[] arr;
+	cout << endl <<split;
+	
+	
+	int S_Odd = 0;
+	int S_Even = 0;
+	int* even = new int[S_Even];
+	int* odd = new int[S_Odd];
+
+	for (int i = 0; i < n; i++)
+	{
+		if (arr[i] % 2)
+		{
+			odd[S_Odd] = arr[i];
+			S_Odd ++;
+		}
+		else
+		{
+			even[S_Even] = arr[i];
+			S_Even ++;
+		}
+		
+	}
+	cout << endl;
+	Print(even, S_Even);
+	cout << endl << split;
+	cout << endl;
+	Print(odd, S_Odd);
+	cout << endl;
+	
 
 }
 void FillRand(int arr[], const int n)
