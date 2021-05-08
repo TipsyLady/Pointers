@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 using namespace std;
 #define tab "\t"
 
@@ -14,8 +14,8 @@ int* erase(int arr[], int& n, int& index);
 void main()
 {
 	setlocale(LC_ALL, "Russian");
-	int n; //размер массива
-	cout << "Введите размер массива: "; cin >> n;
+	int n; //СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°
+	cout << "Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°: "; cin >> n;
 	int* arr = new int[n];
 	FillRand(arr, n);
 	Print(arr, n);
@@ -23,31 +23,31 @@ void main()
 	int value_fr;
 	int index;
 
-	/*cout << "Введите добавляемое значение в начало массива: "; cin >> value_fr;
-	cout << "Введите добавляемое значение в конец массива: "; cin >> value;
+	/*cout << "Р’РІРµРґРёС‚Рµ РґРѕР±Р°РІР»СЏРµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РЅР°С‡Р°Р»Рѕ РјР°СЃСЃРёРІР°: "; cin >> value_fr;
+	cout << "Р’РІРµРґРёС‚Рµ РґРѕР±Р°РІР»СЏРµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°: "; cin >> value;
 	arr = push_back(arr, n, value);
 	arr = push_front(arr, n, value_fr);
 	cout << endl;
 	Print(arr, n);
 	delete[] arr;*/
 
-	/*cout << "Введите добавляемое значение: "; cin >> value; cout << endl;
-	cout << "Введите индекс массива, где будет хранится указанное значение: "; cin >> index; cout << endl;
+	/*cout << "Р’РІРµРґРёС‚Рµ РґРѕР±Р°РІР»СЏРµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ: "; cin >> value; cout << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ РјР°СЃСЃРёРІР°, РіРґРµ Р±СѓРґРµС‚ С…СЂР°РЅРёС‚СЃСЏ СѓРєР°Р·Р°РЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: "; cin >> index; cout << endl;
 	arr = insert(arr, n,value, index);
 	Print(arr, n);
     delete[] arr;*/
 
-	/*cout << "Введите индекс массива, где будет удалено значение: "; cin >> index; cout << endl;
+	/*cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ РјР°СЃСЃРёРІР°, РіРґРµ Р±СѓРґРµС‚ СѓРґР°Р»РµРЅРѕ Р·РЅР°С‡РµРЅРёРµ: "; cin >> index; cout << endl;
 	arr = erase(arr, n, index);
 	Print(arr, n);
 	delete[] arr;*/
 
-	//cout << "Удалить первое значение: " << endl;
+	//cout << "РЈРґР°Р»РёС‚СЊ РїРµСЂРІРѕРµ Р·РЅР°С‡РµРЅРёРµ: " << endl;
 	//arr = pop_front(arr, n);
 	//Print(arr, n);
 	//delete[] arr;
 
-	cout << "Удалить последнее значение: " << endl;
+	cout << "РЈРґР°Р»РёС‚СЊ РїРѕСЃР»РµРґРЅРµРµ Р·РЅР°С‡РµРЅРёРµ: " << endl;
 	arr = pop_back (arr, n);
 	Print(arr, n);
 
@@ -72,7 +72,7 @@ void Print(int arr[], const int n)
 }
 int* push_back(int arr[], int& n, const int value)
 {
-	int* brr = new int[n + 1]{};// {} зануляют выделяемую память
+	int* brr = new int[n + 1]{};// {} Р·Р°РЅСѓР»СЏСЋС‚ РІС‹РґРµР»СЏРµРјСѓСЋ РїР°РјСЏС‚СЊ
 	for (int i = 0; i < n; i++)
 	{
 		brr[i] = arr[i];
@@ -85,7 +85,7 @@ int* push_back(int arr[], int& n, const int value)
 }
 int* push_front(int arr[], int& n, const int value_fr)
 {
-	int* brr = new int[n + 1]{};// {} зануляют выделяемую память
+	int* brr = new int[n + 1]{};// {} Р·Р°РЅСѓР»СЏСЋС‚ РІС‹РґРµР»СЏРµРјСѓСЋ РїР°РјСЏС‚СЊ
 	for (int i = 0; i < n; i++)
 	{
 		brr[i+1] = arr[i];
@@ -99,7 +99,7 @@ int* push_front(int arr[], int& n, const int value_fr)
 int* pop_front(int arr[], int& n)
 
 {
-	int* brr = new int[n - 1]{};// {} зануляют выделяемую память
+	int* brr = new int[n - 1]{};// {} Р·Р°РЅСѓР»СЏСЋС‚ РІС‹РґРµР»СЏРµРјСѓСЋ РїР°РјСЏС‚СЊ
 	for (int i = 0; i < n; i++)
 	{
 		if (i == 0) continue;
@@ -114,7 +114,7 @@ int* pop_front(int arr[], int& n)
 int* pop_back(int arr[], int& n)
 
 {
-	int* brr = new int[n - 1]{};// {} зануляют выделяемую память
+	int* brr = new int[n - 1]{};// {} Р·Р°РЅСѓР»СЏСЋС‚ РІС‹РґРµР»СЏРµРјСѓСЋ РїР°РјСЏС‚СЊ
 	for (int i = 0; i < n; i++)
 	{
 		if (i == (n - 1)) break;
@@ -128,7 +128,7 @@ int* pop_back(int arr[], int& n)
 }
 int* insert(int arr[], int& n, const int value, int& index)
 {
-	int* brr = new int[n + 1]{};// {} зануляют выделяемую память
+	int* brr = new int[n + 1]{};// {} Р·Р°РЅСѓР»СЏСЋС‚ РІС‹РґРµР»СЏРµРјСѓСЋ РїР°РјСЏС‚СЊ
 	for (int i = 0; i < n; i++)
 	{
 		if (i >= index)
@@ -143,7 +143,7 @@ int* insert(int arr[], int& n, const int value, int& index)
 }
 int* erase(int arr[], int& n, int& index)
 {
-	int* brr = new int[n + 1]{};// {} зануляют выделяемую память
+	int* brr = new int[n + 1]{};// {} Р·Р°РЅСѓР»СЏСЋС‚ РІС‹РґРµР»СЏРµРјСѓСЋ РїР°РјСЏС‚СЊ
 	for (int i = 0; i < n; i++)
 	{
 		if (i > index)
