@@ -53,22 +53,23 @@ void main()
 	
 	int S_Odd = 0;
 	int S_Even = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (arr[i] % 2 == 0)
+			S_Even++;
+		else S_Odd++;
+	}
+
 	int* even = new int[S_Even];
 	int* odd = new int[S_Odd];
 
-	for (int i = 0; i < n; i++)
+	for (int i = 0, j = 0, k = 0; i < n; i++)
 	{
 		if (arr[i] % 2)
-		{
-			odd[S_Odd] = arr[i];
-			S_Odd ++;
-		}
+		odd[j++] = arr[i];
+			
 		else
-		{
-			even[S_Even] = arr[i];
-			S_Even ++;
-		}
-		
+		even[k++] = arr[i];
 	}
 	cout << endl;
 	Print(even, S_Even);
@@ -77,7 +78,9 @@ void main()
 	Print(odd, S_Odd);
 	cout << endl;
 	
-
+	delete[] arr;
+	delete[] even;
+	delete[] odd;
 }
 void FillRand(int arr[], const int n)
 {
